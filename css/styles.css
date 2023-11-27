@@ -1,11 +1,11 @@
 .fecha{
-    width: 40%;
+    width: 50%;
     height: 150px;
     border: 1px solid red;
 }
 
 .hora{
-    width: 40%;
+    width: 50%;
     height: auto;
     border: 1px solid red;
     padding: 40px;
@@ -14,7 +14,25 @@
 .col{
     border: 1px solid red;
     height: 150px;
+    width: 20%;
 }
 .caja{
     height: 50%;
+    
+}
+
+#fecha{
+    font-size: 40px;
+}
+
+#hora, #minutos{
+    font-size: 40px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+#amPm, #segundos{
+    font-size: 30px;
+    margin: 0;
+    padding: 0;
 }
