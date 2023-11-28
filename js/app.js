@@ -19,29 +19,22 @@ const mes = mesesAnio[fecha.getMonth()]
 
 fechaHoy.innerHTML = (`${dia} ${fecha.getDate()} de ${mes} de ${fecha.getFullYear()}`);
 
-if (fecha.getHours() <= 9){
-hora.innerHTML = `0${fecha.getHours()} :`;
-}else{
-    hora.innerHTML = `${fecha.getHours()} :`;
-}
+hora.innerHTML = `${formatoTiempo(fecha.getHours())} : `
 
-if(fecha.getMinutes() <= 9){
-minutos.innerHTML = `0${fecha.getMinutes()} :`;
-}else{
-    minutos.innerHTML = `${fecha.getMinutes()} :`;
-}
+minutos.innerHTML = `${formatoTiempo(fecha.getMinutes())} :`
 
-if(fecha.getSeconds() <= 9){
-segundos.innerHTML = `0${fecha.getSeconds()}`;
-}else{
-    segundos.innerHTML = `${fecha.getSeconds()}`;
-}
+segundos.innerHTML = `${formatoTiempo(fecha.getSeconds())}`
 
-if (fecha.getHours() <= 12){
+if (fecha.getHours() < 12){
     amPm.innerHTML = 'AM'
 }else{
     amPm.innerHTML = 'PM'
 }
+
+function formatoTiempo(time) {
+    return time < 10 ? '0' + time : time;
+  }
+
 }
 
 reloj();
