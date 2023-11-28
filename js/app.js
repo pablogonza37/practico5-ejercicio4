@@ -20,7 +20,7 @@ const mes = mesesAnio[fecha.getMonth()]
 fechaHoy.innerHTML = (`${dia} ${fecha.getDate()} de ${mes} de ${fecha.getFullYear()}`);
 
 if (fecha.getHours() <= 9){
-hora.innerHTML = `'0'${fecha.getHours()} :`;
+hora.innerHTML = `0${fecha.getHours()} :`;
 }else{
     hora.innerHTML = `${fecha.getHours()} :`;
 }

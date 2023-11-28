@@ -1,38 +1,128 @@
-.fecha{
-    width: 50%;
-    height: 150px;
-    border: 1px solid red;
+body {
+  background-image: url("https://e1.pxfuel.com/desktop-wallpaper/963/952/desktop-wallpaper-plain-backgrounds-for-websites-design-8-plain-background.jpg");
+  background-size: cover;
 }
 
-.hora{
-    width: 50%;
-    height: auto;
-    border: 1px solid red;
-    padding: 40px;
+section{
+    padding: 60px;
+}
+.fecha {
+  
+  height: 150px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.514);
+  padding: 10px;
 }
 
-.col{
-    border: 1px solid red;
-    height: 150px;
-    width: 20%;
-}
-.caja{
-    height: 50%;
-    
-}
-
-#fecha{
-    font-size: 40px;
+.hora {
+  
+  height: auto;
+  border-radius: 10px;
+  padding: 40px;
+  background-color: rgba(0, 0, 0, 0.514);
+  
 }
 
-#hora, #minutos{
-    font-size: 40px;
-    margin: 0;
-    padding: 0;
+.col {
+  height: 150px;
+  padding: 0;
+}
+.caja {
+  height: 50%;
+}
+
+#fecha {
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+}
+
+#hora,
+#minutos {
+  font-size: 70px;
+  font-weight: bold;
+  color: white;
+}
+
+#amPm,
+#segundos {
+  font-size: 40px;
+  padding-right: 50px;
+  font-weight: bold;
+  color: white;
+}
+
+#amPm {
+  padding-top: 40px;
+}
+
+#segundos {
+  padding-bottom: 40px;
+}
+
+.row {
+  width: 45%;
+}
+
+@media all and (max-width: 767px) {
+  .row {
+    width: 80%;
+  }
+  .fecha,
+  .hora {
     width: 100%;
-}
-#amPm, #segundos{
-    font-size: 30px;
-    margin: 0;
+  }
+  #fecha {
+    font-size: 25px;
+  }
+  #hora,
+  #minutos {
+    font-size: 35px;
+  }
+  .hora {
     padding: 0;
+  }
+  #amPm,
+#segundos {
+  font-size: 20px;
+  padding-right: 0;
+}
+#amPm {
+    padding-top: 55px;
+  }
+  
+  #segundos {
+    padding-bottom: 55px;
+  }
+section{
+    padding: 10px;
+}
+
+}
+
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .fecha,
+  .hora {
+    width: 100%;
+  }
+  #hora,
+  #minutos {
+    font-size: 70px;
+  }
+  .hora {
+    padding: 0;
+  }
+  .row{
+    width: 60%;
+  }
+
+}
+@media all and (min-width: 992px) {
+  .fecha,
+  .hora {
+    width: 100%;
+  }
+  .row{
+    width: 40%;
+  }
 }
