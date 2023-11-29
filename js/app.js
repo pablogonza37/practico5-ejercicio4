@@ -1,8 +1,7 @@
 const fechaHoy = document.querySelector('#fecha');
-const hora = document.querySelector('#hora');
-const minutos = document.querySelector('#minutos');
-const segundos = document.querySelector('#segundos');
-const amPm = document.querySelector('#amPm');
+const tiempo = document.getElementById('tiempo');
+const segundosActual = document.getElementById('segundos');
+const amPm = document.getElementById('amPm');
 
 const reloj = () =>{
 
@@ -19,23 +18,28 @@ const mes = mesesAnio[fecha.getMonth()]
 
 fechaHoy.innerHTML = (`${dia} ${fecha.getDate()} de ${mes} de ${fecha.getFullYear()}`);
 
-hora.innerHTML = `${formatoTiempo(fecha.getHours())} : `
+const horas = fecha.getHours();
+const minutos = fecha.getMinutes();
+const segundo = fecha.getSeconds();
 
-minutos.innerHTML = `${formatoTiempo(fecha.getMinutes())} :`
+tiempo.innerHTML =
+  formatoTiempo(horas) + ':' + formatoTiempo(minutos) + ':'
 
-segundos.innerHTML = `${formatoTiempo(fecha.getSeconds())}`
+  segundosActual.innerHTML = formatoTiempo(segundo);
 
-if (fecha.getHours() < 12){
+  if (horas < 12){
     amPm.innerHTML = 'AM'
 }else{
     amPm.innerHTML = 'PM'
 }
 
+}
+
 function formatoTiempo(time) {
     return time < 10 ? '0' + time : time;
-  }
-
 }
+
+
 
 reloj();
 
