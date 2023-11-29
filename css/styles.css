@@ -39,7 +39,7 @@ section {
 
 #tiempo {
   font-weight: bold;
-  font-size: 130px;
+  font-size: 120px;
 }
 
 @media all and (max-width: 767px) {

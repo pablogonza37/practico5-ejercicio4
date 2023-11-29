@@ -3,7 +3,7 @@ const tiempo = document.getElementById('tiempo');
 const segundosActual = document.getElementById('segundos');
 const amPm = document.getElementById('amPm');
 
-const reloj = () =>{
+function reloj(){
 
 const fecha = new Date();
 const diaSemana = ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado'];
@@ -27,12 +27,17 @@ tiempo.innerHTML =
 
   segundosActual.innerHTML = formatoTiempo(segundo);
 
-  if (horas < 12){
-    amPm.innerHTML = 'AM'
-}else{
-    amPm.innerHTML = 'PM'
+  formatoAmPm(horas);
+
 }
 
+
+function formatoAmPm(hora){
+    if (hora < 12){
+        amPm.innerHTML = 'AM'
+    }else{
+        amPm.innerHTML = 'PM'
+    }
 }
 
 function formatoTiempo(time) {
